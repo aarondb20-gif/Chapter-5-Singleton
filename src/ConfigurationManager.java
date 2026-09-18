@@ -1,21 +1,28 @@
 public class ConfigurationManager {
 
     // setup Singleton Instance
-    private static final ConfigurationManager uniqueInstance = new ConfigurationManager();
+    private static ConfigurationManager instance;
 
     //Constructor is closed
-    private ConfigurationManager() {}
+    private ConfigurationManager() {
+        System.out.println("Configuration Changed");
+    }
 
     public static ConfigurationManager getInstance(){
+        if(instance == null){
+            instance = new ConfigurationManager();
+            instance.setVolume(100);
+            instance.setResolution(1080);
+            instance.setDisplayMode("Full Screen");
+        }
+        return instance;
 
-        return uniqueInstance;
     }
 
     //Initialize variables, getters, and setters
     private int volume;
     private int resolution;
     private String displayMode;
-
 
     public String getVolume(){
         return "Volume: " + volume;
