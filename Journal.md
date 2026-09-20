@@ -10,3 +10,8 @@ Lazy loading is useful if you need the program to load faster initially, and use
 It is good for objects or data that are not used very often. The trade-off is that it will not load everything 
 into memory at once and keep all data stored in memory. You can only access that data on demand as you make calls
 to the instance.
+
+Phase 3
+It's only obvious that the subsystems rely on Configuration Manager because it is passed in the constructor parameter.
+Hidden dependencies is when a Singleton dependency is not declared in an obvious way. They will make unit testing confusing 
+when developers don't know all the dependencies that a class needs to have for it to successfully run.
