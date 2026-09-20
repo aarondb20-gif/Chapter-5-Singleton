@@ -21,8 +21,8 @@ public class ConfigurationManager {
     private int resolution;
     private String displayMode;
 
-    public int getVolume(){
-        return  volume;
+    public String getVolume(){
+        return  "Volume: " + volume;
     }
 
     public String getResolution(){

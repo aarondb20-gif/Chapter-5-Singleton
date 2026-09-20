@@ -15,3 +15,9 @@ Phase 3
 It's only obvious that the subsystems rely on Configuration Manager because it is passed in the constructor parameter.
 Hidden dependencies is when a Singleton dependency is not declared in an obvious way. They will make unit testing confusing 
 when developers don't know all the dependencies that a class needs to have for it to successfully run.
+
+Phase 4
+The Singleton is convenient, because component reads from and writes to the same static instance. Since the instance
+only needs to be created one time it saves startup time. The Singleton is appropriate for objects that are 
+connecting to the same static access point like a URL. It becomes less useful when the variables or settings
+objects depend on change frequently.

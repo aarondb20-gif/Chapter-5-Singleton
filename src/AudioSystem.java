@@ -7,7 +7,7 @@ public class AudioSystem{
 
     }
     public String volumeMessage(){
-        return "Playing Audio. Volume: " + configM.getVolume();
+        return "Playing Audio. " + configM.getVolume();
     }
 
 
